@@ -19,6 +19,16 @@ app.get('/students', (req, res) => {
     });
 });
 
+// Question 4
+app.get('/students/:id', (req, res) => {
+    const studentId = req.params.id;
+
+    res.json({
+        message: 'Student ID Received',
+        id: studentId
+    });
+});
+
 app.listen(3000, () => {
     console.log('Server running on port 3000');
 });
